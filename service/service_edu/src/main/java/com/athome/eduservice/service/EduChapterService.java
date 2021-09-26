@@ -1,0 +1,24 @@
+package com.athome.eduservice.service;
+
+import com.athome.eduservice.entity.EduChapter;
+import com.athome.eduservice.entity.chapter.ChapterVo;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
+
+/**
+ * <p>
+ * 课程 服务类
+ * </p>
+ *
+ * @author Boring Jimmy
+ * @since 2021-06-17
+ */
+public interface EduChapterService extends IService<EduChapter> {
+
+    List<ChapterVo> getChaptersByCourseId(String courseId);
+
+    boolean deleteById(String chapterId);
+
+    void removeByCourseId(String courseId);
+}
